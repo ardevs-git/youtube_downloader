@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>YouTube Video Downloader</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: aqua;
+        }
+        h1{
+            color: blue;
+            
+        }
+        button{
+            background-color: #4CAF50;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Download YouTube Video</h1>
+    <form action="/download" method="POST">
+        <label for="url">YouTube URL:</label><br>
+        <input type="text" id="url" name="url" required placeholder="Enter Your Url"><br><br>
+        
+        <label for="quality">Select Quality:</label><br>
+        <select id="quality" name="quality">
+            <option value="best">Best</option>
+            <option value="worst">Worst</option>
+            <option value="bestaudio">Audio Only</option>
+        </select><br><br>
+        
+        <button type="submit">Download</button>
+    </form>
+</body>
+</html>
